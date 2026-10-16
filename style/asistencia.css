@@ -1,0 +1,37 @@
+.barra-asistencia { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.barra-asistencia select { width: auto; }
+.leyenda { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+.chip { display: inline-block; padding: 1px 8px; border-radius: 10px; }
+
+.tabla-asistencia-wrap { margin-top: 16px; }
+.tabla-asistencia, .tabla-resumen { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+.tabla-asistencia th, .tabla-asistencia td,
+.tabla-resumen th, .tabla-resumen td {
+  border: 1px solid var(--border);
+  padding: 4px 6px;
+  color: var(--text);
+  white-space: nowrap;
+}
+.tabla-asistencia thead th, .tabla-resumen thead th { background: var(--primary); color: #fff; text-align: center; }
+.tabla-asistencia th.semana { font-size: 0.8rem; }
+.tabla-asistencia tbody th { text-align: left; font-weight: 600; }
+
+.celda-dia { padding: 0 !important; text-align: center; }
+.btn-dia {
+  width: 100%;
+  min-width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 0.95rem;
+}
+.btn-dia:hover { background: rgba(127, 127, 127, 0.2); }
+
+/* Verde = asistencia, rojo = falta (antes estaban invertidos y la regla usaba "backgroundColor", inválida en CSS) */
+.mrc-asistencia { background-color: #2e9d48; color: #fff !important; }
+.mrc-falta { background-color: #d23b3b; color: #fff !important; }
+
+.tabla-resumen td.num { text-align: right; }
+#panel-resumen { margin-top: 20px; }

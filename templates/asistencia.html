@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <title>Asistencia · Control de Calificaciones</title>
+  <script type="module" src="../src/pages/asistencia.js"></script>
+</head>
+<body class="modo-claro">
+  <div class="container__headb">
+    <div class="ctrl__encabezado">
+      <header>
+        <h1 id="Title">Control de asistencia · Mes 1</h1>
+        <nav aria-label="Navegación principal">
+          <ul class="list-netw_soc">
+            <li><a href="../index.html"><i class="bi bi-house" aria-hidden="true"></i> Inicio</a></li>
+            <li><a href="./graficas.html"><i class="bi bi-bar-chart" aria-hidden="true"></i> Graficar</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <button type="button" class="change-mode" aria-pressed="false">Modo oscuro</button>
+
+  <main class="container">
+    <div class="barra-asistencia">
+      <label for="mes">Mes</label>
+      <select id="mes" class="form-select form-select-sm"></select>
+      <p class="leyenda">
+        Clic en una celda: <span class="chip mrc-asistencia">✓ asistencia</span> →
+        <span class="chip mrc-falta">✗ falta</span> → vacío. Se guarda automáticamente.
+      </p>
+    </div>
+
+    <div class="table-responsive tabla-asistencia-wrap">
+      <table id="tabla-asistencia" class="tabla-asistencia"></table>
+    </div>
+
+    <div class="acciones">
+      <button type="button" id="mostrar-asistencia">Ver resumen</button>
+      <button type="button" id="limpiar-asistencia" class="btn btn-outline-danger">Borrar mes</button>
+    </div>
+    <div id="asistencia-feedback" class="feedback" aria-live="polite"></div>
+
+    <section id="panel-resumen" hidden>
+      <h2>Resumen del mes</h2>
+      <div class="table-responsive">
+        <table id="tab-resultado" class="tabla-resumen"></table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

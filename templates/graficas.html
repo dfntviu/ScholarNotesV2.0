@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	 <link rel="stylesheet" type="text/css" href="../style/califs.style.css">
-	 <link rel="stylesheet" type="text/css" href="../style/foot.end.head.css">
-	 <link rel="stylesheet" type="text/css" href="../style/modes.drk.ligth.css">
-	<title> Score Content - Notes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <title>Gráfica de Promedios · Control de Calificaciones</title>
+  <script type="module" src="../src/pages/graficas.js"></script>
 </head>
 <body class="modo-claro">
-   		
-	<div class="container__headb modo-claro">
-   	  	<div class="ctrl__encabezado">
-   	  	    <header id>
-   	  	    	<h1 id="Title"> VISOR DE GRÁFICOS</h1>
-   	  	       <li class="list-netw_soc">
-   	  	     	<ul><a href="https://www.youtube.com/@arcaivrow"><i class="bi bi-youtube"></i>Canal</a></ul>
-   	  	     	<ul><a href="https://web.whatsapp.com/"><i class="bi bi-whatsapp"></i>Contacto</a></ul>
-   	  	     	<ul><a href="../"><i class=""></i>Inicio</a></ul>
-   	   	      </li>
-   	   	      	<ul class="list-netw_soc"><a href="./login.html" id="op__exit">Salir</a></ul>
-   	  	    </header>
-   	    </div>   	  
-   	</div>
+  <div class="container__headb">
+    <div class="ctrl__encabezado">
+      <header>
+        <h1 id="Title">VISOR DE GRÁFICOS</h1>
+        <nav aria-label="Navegación principal">
+          <ul class="list-netw_soc">
+            <li><a href="https://www.youtube.com/@arcaivrow" target="_blank" rel="noopener"><i class="bi bi-youtube" aria-hidden="true"></i> Canal</a></li>
+            <li><a href="https://web.whatsapp.com/" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Contacto</a></li>
+            <li><a href="../index.html"><i class="bi bi-house" aria-hidden="true"></i> Inicio</a></li>
+            <li><a href="./asistencia.html"><i class="bi bi-calendar-check" aria-hidden="true"></i> Asistencia</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </div>
 
-  <!-- <button class="change-mode">Cambiar</button> -->
+  <button type="button" class="change-mode" aria-pressed="false">Modo oscuro</button>
 
-	<div class="container modo-claro">
-		<h1 class>Grafica de Promedios</h1>
-   		<canvas   id="grafico_promedios" height="600" height="750"></canvas>
-   		<button id="get__score" class="b btn-warning">Ver</button>
-	</div>
-   	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<script type="module" src="../modules/resultados/graphs.prom.js"></script>
+  <main class="container">
+    <h2>Distribución de promedios</h2>
+    <p id="total_alumnos" class="text-muted-tema"></p>
+    <div class="grafica">
+      <canvas id="grafico_promedios" role="img" aria-label="Gráfica de barras: número de alumnos por rango de promedio"></canvas>
+    </div>
+    <button type="button" id="get__score" class="btn btn-warning">Actualizar gráfica</button>
+  </main>
 </body>
 </html>

@@ -1,42 +1,35 @@
-body.modo-claro{
-	background-color: #ffffff;
-	color: #000000;
+/* Modo claro: usa los tokens de :root (califs.style.css) */
+
+/* Modo oscuro: redefine los tokens; todos los componentes los consumen */
+body.modo-oscuro {
+  --bg: #2b2d2e;
+  --surface: #36393a;
+  --surface-alt: #2f3233;
+  --text: #f1f1f1;
+  --text-muted: #b5bcc6;
+  --border: #4a4f52;
+  --primary: #4c9dff;
+  --primary-hover: #2f7fe0;
+  --accent: #3fb54f;
+  --input-bg: #2b2d2e;
 }
 
-.container.modo-claro {
-	background-color: #f0f0f0;
-}
-/*	la unica q no cambia*/
-h3.modo-claro, h2.modo-claro{  
-	color: #000;
-}
+body.modo-oscuro label { color: #7fd8ff; }
+body.modo-oscuro .ctrl__encabezado { background-color: #1a2a80; }
 
-form.modo-claro{
-	color: #0000ff;
+/* Botón de cambio de modo */
+.change-mode {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  background-color: #ccc;
+  color: #111;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
 }
-
-/*estilos del modo dark*/
-body.modo-oscuro{
-  background-color: #353839;
-  color: #ffff;  /*mayor contranste*/
-}
-
-.container.modo-oscuro{
-	background-color: #333333;
-}
-
-form.modo-oscuro{
-	color: #00ffff;
-}
-
-/* se realiza el cambio de props del botón*/
-.change-mode{
-	position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #ccc;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-}
+.change-mode:hover { background-color: #b5b5b5; }
+body.modo-oscuro .change-mode { background-color: #555; color: #fff; }

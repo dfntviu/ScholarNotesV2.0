@@ -1,92 +1,79 @@
-.container__head {
-    margin: 20px 10px;
-    background: #e0f7fa; /* Azul claro suave */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 15px;
+/* Encabezado */
+.container__headb {
+  margin: 0 0 10px;
+  padding: 15px;
 }
 
-/*Begin header */
 .ctrl__encabezado {
-    background-color: #00f; /* Azul claro un poco más oscuro */
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #0000ff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #Title {
-    text-align: center;
-    text-shadow: 4.1px 3.1px #0b0b0b;
-    font-size: 36px;
-    color: #d4e4d7; /* Azul más fuerte para contraste */
-    margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;
+  text-align: center;
+  text-shadow: 4.1px 3.1px #0b0b0b;
+  font-size: clamp(22px, 4vw, 36px);
+  color: #d4e4d7;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
 }
 
 .list-netw_soc {
-    display: flex;
-    justify-content: center; /* Centra los enlaces */
-    gap: 20px; /* Espacio entre los enlaces */
-    padding: 0;
-    list-style: none; /* Elimina puntos de lista */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .list-netw_soc li a {
-    text-decoration: none;
-    color: #bcc2ca;
-    font-size: 18px;
-    font-family: 'Arial', sans-serif;
-    transition: color 0.3s ease; /* Transición suave de color */
+  text-decoration: none;
+  color: #e3e8ef;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  transition: color 0.3s ease;
 }
 
-.list-netw_soc li a:hover {
-    color: #004c99; /* Cambio de color al pasar el mouse */
-}
- 
-ul a {
-    color: #bcc2ca;
-}
-/* pie de página */
-.container-f{
-    background: #1754b7;
-    margin: auto;
-    max-width: 97%;
+.list-netw_soc li a:hover { color: #ffd84d; }
+
+/* Pie de página */
+footer { margin-top: 24px; }
+
+.container-f {
+  background: #1754b7;
+  margin: auto;
+  max-width: 97%;
+  padding: 16px 24px;
+  border-radius: 8px 8px 0 0;
 }
 
-#pie{
-    text-align: center;
+#pie { text-align: center; color: #fff; }
+
+#inf {
+  color: #ebedf4d7;
+  text-transform: uppercase;
 }
 
-#inf{
-     color: #ebedf4d7;
-     text-transform: uppercase;
+.content {
+  text-align: justify;
+  text-indent: 34px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-family: monospace;
+  line-height: 1.4;
+  font-size: 16.5px;
 }
 
-.content{
-    text-align: justify;
-    text-indent: 34px;
-    text-transform: capitalize;
-    letter-spacing: 2px;
-    font-family: monospace;
-    line-height: 1.4;
-    font-size: 16.5px;
-}
+/* (antes: una llave "}" suelta aquí invalidaba las reglas siguientes,
+   y "transition: scale()" no es una propiedad válida) */
+.bi-whatsapp, .bi-youtube { display: inline-block; transition: transform 0.2s ease, color 0.2s ease; }
+a:hover .bi-whatsapp { color: beige; transform: scale(1.4); }
+a:hover .bi-youtube { color: red; transform: scale(1.3); }
 
+@media (prefers-reduced-motion: reduce) {
+  .bi-whatsapp, .bi-youtube { transition: none; }
 }
-
-.bi-whatsapp:hover{
-    color: beige;
-    transition: scale(1.4);
-}
-
-.bi-youtube:hover{
-    color: red;
-    transition: scale(1.3);
-}
-/* li  ul a {
-    display: block;
-    text-align: right;
-    text-decoration: none;
-    color: #00f;
-    border: aut;
-    margin: 6px 10px;
-} */
