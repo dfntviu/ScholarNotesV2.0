@@ -1,0 +1,92 @@
+.container__head {
+    margin: 20px 10px;
+    background: #e0f7fa; /* Azul claro suave */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px;
+}
+
+/*Begin header */
+.ctrl__encabezado {
+    background-color: #00f; /* Azul claro un poco más oscuro */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#Title {
+    text-align: center;
+    text-shadow: 4.1px 3.1px #0b0b0b;
+    font-size: 36px;
+    color: #d4e4d7; /* Azul más fuerte para contraste */
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.list-netw_soc {
+    display: flex;
+    justify-content: center; /* Centra los enlaces */
+    gap: 20px; /* Espacio entre los enlaces */
+    padding: 0;
+    list-style: none; /* Elimina puntos de lista */
+}
+
+.list-netw_soc li a {
+    text-decoration: none;
+    color: #bcc2ca;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    transition: color 0.3s ease; /* Transición suave de color */
+}
+
+.list-netw_soc li a:hover {
+    color: #004c99; /* Cambio de color al pasar el mouse */
+}
+ 
+ul a {
+    color: #bcc2ca;
+}
+/* pie de página */
+.container-f{
+    background: #1754b7;
+    margin: auto;
+    max-width: 97%;
+}
+
+#pie{
+    text-align: center;
+}
+
+#inf{
+     color: #ebedf4d7;
+     text-transform: uppercase;
+}
+
+.content{
+    text-align: justify;
+    text-indent: 34px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-family: monospace;
+    line-height: 1.4;
+    font-size: 16.5px;
+}
+
+}
+
+.bi-whatsapp:hover{
+    color: beige;
+    transition: scale(1.4);
+}
+
+.bi-youtube:hover{
+    color: red;
+    transition: scale(1.3);
+}
+/* li  ul a {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #00f;
+    border: aut;
+    margin: 6px 10px;
+} */

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Concentrado Calificaciónes</title>
+	 <link rel="stylesheet" type="text/css" href="./style/califs.style.css">
+	 <link rel="stylesheet" type="text/css" href="./style/foot.end.head.css">
+	 <link rel="stylesheet" type="text/css" href="./style/modes.drk.ligth.css">
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body class="modo-claro">
+	 <!-- Encabezado -->
+   	<div class="container__headb">
+   	  	<div class="ctrl__encabezado">
+   	  	    <header id>
+   	  	    	<h1 id="Title"> PROYECTO 01 CONTROL DE CALIFICACIÓNES</h1>
+   	  	       <li class="list-netw_soc">
+   	  	     	<ul><a href="https://www.youtube.com/@arcaivrow"><i class="bi bi-youtube"></i>Canal</a></ul>
+   	  	     	<ul><a href="https://web.whatsapp.com/"><i class="bi bi-whatsapp"></i>Contacto</a></ul>
+   	  	     	<ul><a href="./templates/graficas.html">Gráficar</a></ul>
+   	   	      </li>
+   	   	      	<ul><a href="./templates/asistencia.acad.html">Asistencia</a></ul>
+   	   	      	<ul class="list-netw_soc"><a href="./login.html" id="op__exit">Salir</a></ul>
+   	  	    </header>
+   	    </div>   	  
+   	</div>
+   	  <!-- Modo Nocturno -->
+   	   <button class="change-mode">Cambiar</button>
+ 	 <!-- Cont. Entrada -> (Formulario) -->
+	<div class="container modo-claro">
+     	<h3 class="modo-claro"> Registro de Alumnos</h3>	
+     		<!-- Entradas -->
+		 <form id="estudiante_form" class="modo-claro">
+			<label for="nombre"></label>
+			 <label for="nombre">Nombre:</label>
+			<input type="text" id="nombre" name="nombre" required placeholder="sin Capitalizar"></br> 
+				 <!-- atributo que obliga a llenar el campo -->
+			<label for="apellido">Apellido </label>
+			<input type="text" id="apellido" name="apellido" required placeholder="sin Capitalizar"></br>
+
+			<label for="calif1">Calificación - 1</label>
+			<input type="text"  id="calif1" name="calif1" required placeholder="En Numero Entero"><br>
+			<label for="calif2">Calificación - 2</label>
+			<input type="text" id="calif2" name="calif2" required placeholder="En Numero Entero"><br>
+			<label for="calif3">Calificación 3</label>
+			<input type="text" id="calif3" name="calif3" required placeholder="En Numero Entero"><br>
+			<button type="submit">Añadir Alumno</button>
+			<button id="all_calif">Mostrar Calificaciónes</button>
+		 </form>
+			
+			<div class="salida modo">
+			  <h2 class="modo-claro"> Mostrando Calificaciónes..  </h2>
+		    </div>
+			 <!-- tabla de Ex Parciales -->
+			<table id="historial_calif" class="table__alums">  
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Apellido</th>
+						<th>Exámen - 01</th>
+						<th>Exámen - 02</th>
+						<th>Exámen - 03</th>
+					</tr>  
+				</thead>
+				<tbody id="content__alumn-table">
+					<!--Lógica llenado de agregará  Alumnos x etiq desde el controlador  -->
+				</tbody>
+			</table>
+			
+		  <div  id="squareprint--calif" class="save__calif">
+		   <button id="alums__pdfprint" class="b btn-info">Imprimir</button>
+		   <button id="desc__calif_Pdf" class="b btn-success" >PDF</button>
+		   <button id="desc__calific" class="b btn-success" >Descargar</button>
+		 </div>
+
+		 	<div class="container">   				<!--   Cont. de califs de Examenes(Revisor)  -->
+				<div id="contenedor_calif"></div>
+		    </div>
+	</div>
+	 <!-- Contenedor  Promedios -->
+	<div class="container modo-claro"> 
+		<div class="container modo-claro">
+			<button id="terminar">Mostrar Estadistícas  </button>	 <!-- Botones de Salidas -->
+		</div>
+		<table id="estadist_alumnos" class="modo-claro">
+			<thead>
+				<tr>
+				<th>Nombre-</th>
+				<th>Apell-</th>
+				<th>Promedio-Tot</th>
+				</tr>
+			</thead>
+			 <tbody>
+					<!--Estadistícas de todo el grupo  -->
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+			</tbody>
+		</table>
+    </div>
+     	<!-- Margin de Busq. (2)  -->
+	 <!-- Contenedor Busq -->
+    <div class="container modo-claro">
+    	<button id="buscar--alum">Buscar</button>
+		  <input type="text" name="tec__alumno" id="tec__alumno" placeholder="Alumno a Buscar" class="i_search"><br/>
+			<!-- ## Es arriba pues se está emalmando si el pholder E input están en su mismo lugar [no irá embebido en el cont'r de busq.]  ##-->
+    	<div class="cont__busqueda" id="container_search"> 
+		<!-- <section id="margen-busq">  //aplicar separador -->		
+			<div class="nm_enc-1"></div>
+		 	<div class="nm_enc-2"></div>
+		 	<div class="nm_enc-3"></div>	
+		 	<p class="advice"> </p>
+		 <!-- </section> -->
+	    </div> 
+    </div>
+   	
+	<footer class="modo-claro">
+ 		<div class="container-f">
+ 			<div id="inf">
+ 				<h2 id="pie">Contáctame</h2>
+ 				<p class="content">
+ 					<br>Develop young - Ing. en Computación
+ 					<br>Afordable Costs
+	 					<br>The Sciences Computer is of new area what is necessary for develop of more fast,
+							because is these 'd you need learn the new skills, how programming, metodologies,
+							and all what it has being saw with others nature of develop.
+ 			    </p>
+ 			    <p class="content">
+ 			     		archive-roll S.A de C.V  
+ 			        <br>Telefono: Vía WatssApp	
+ 			        <br>Canal: archivebrow 
+ 			        This is Channel, They 're starting for too courious on relevants topics
+ 			        of technology. In Addition, Is a good moment for to preparing your knowdledges
+ 			        for System, Fundamentals of DataBases and you want to learn with mee; one 
+ 			        the new form the knowledge more there out classroom.
+ 			    </p>
+ 			</div>
+ 		</div>
+ 	</footer>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.14/jspdf.plugin.autotable.min.js"></script>
+		 <script type="module" src="app.js"></script>
+		 <!-- <script type="module" src="./modulos/validaciones.main.js" ></script> -->		
+    </body>
+    <!--    -->
+</html>
+		  <!-- <pre id="estadist_alumns"></pre>  es inecesario importar en js, pues ya se agrego en Html -->  

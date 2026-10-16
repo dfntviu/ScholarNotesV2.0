@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Asistencia</title>
+	 <link rel="stylesheet" type="text/css" href="../style/califs.style.css">
+	 <link rel="stylesheet" type="text/css" href="../style/foot.end.head.css">
+		<!-- <style type="text/css"> 		</style> -->
+</head>
+<body>
+	<h2 id="Title"> Control de Asistencia Mes: 1</h2>	
+     		<!-- Entradas -->
+		 <form id="estudiante_form" class="container">
+			<label for="nombre"></label>
+			 <label for="nombre">Nombre:</label>
+			<input type="text" id="nombre" name="nombre" required ></br> 
+				 <!-- atributo que obliga a llenar el campo -->
+			<label for="apellido">Apellido </label>
+			<input type="text" id="apellido" name="apellido" required></br>
+			<label for="calif3">Calificacion Parcial</label>
+			<input type="text" id="prom_f" name="prom_f"><br>
+			<button type="button" id="save-asistencia">Guardar Asistencia</button>
+			<!-- <button type="button" id="view-asistencia">Visualr Asistencia</button> -->
+		 </form>
+
+	 <div class="container" id="tab--asistencia">
+	 		<table>
+	 				<thead id="days-w">
+	 					<!-- creados Dinamicamente -->
+	 				</thead>
+	 				
+	 				<thead>  
+	 					<!-- Cont. Estatico -->
+	 				  <td>Nombre</td>
+	 				  <td>Apellido</td>
+	 				  <td id=contar></td>
+	 				</thead>
+	 				  
+	 			<tbody id="get-alums">
+	 					<!-- Creados Dinamicamente -->
+	 					<!-- <tr>
+	 						<td> a --</td>
+	 						<td>b --</td>
+	 						<td>c --</td>
+	 						<td>d --</td>
+	 						<td>e --</td>
+	 					</tr>	 --> 					
+	 			</tbody>
+	 		</table>
+
+
+	 		<table id="tab-resultado" style="display:none;" >
+	 					
+	 		</table>
+	 		 <button type="button" id="mostrar-asistencia">Visualr Asistencia</button>
+
+	 </div>
+	 	<script type="module" src="../modules/asistencia/init.list-attend.js"></script>
+	 	<!-- <script type="module" src="../modules/asistencia/attend.ctrl.js"></script> -->
+
+</body>
+</html>
